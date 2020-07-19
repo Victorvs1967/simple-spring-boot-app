@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+body {
+	min-height: 75rem;
+	padding-top: 4.5rem;
+}
+
+.footer {
+	background-color: #f5f5f5;
+}
+
+code {
+	font-size: 80%;
+}
