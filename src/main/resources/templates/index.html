@@ -9,6 +9,7 @@
 
 <body>
 	<div layout:fragment="content" class="container-fluid pl-0 pr-0">
+	<div class="title-img"></div>
 		<main role="main" class="container-fluid pl-0 pr-0">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container">
@@ -19,6 +20,16 @@
 					<p th:text="${date}"></p>
 					<p sec:authorize="isAuthenticated()">
 						Username: <span sec:authorize="isAuthenticated()" th:text="${#authentication.getPrincipal().getUsername()}"></span>
+					</p>
+					<h4>User information:</h4>
+					<p sec:authorize="isAuthenticated()">
+						First name: <span sec:authorize="isAuthenticated()" th:text="${members.firstName}"></span>
+					</p>
+					<p sec:authorize="isAuthenticated()">
+						Last name: <span sec:authorize="isAuthenticated()" th:text="${members.lastName}"></span>
+					</p>
+					<p sec:authorize="isAuthenticated()">
+						e-mail: <span sec:authorize="isAuthenticated()" th:text="${members.email}"></span>
 					</p>
 					<a sec:authorize="!isAuthenticated()" class="btn btn-lg btn-primary" href="/login" role="button">Login &raquo;</a> <a
 						sec:authorize="!isAuthenticated()" class="btn btn-lg btn-primary" href="/register" role="button">Register &raquo;</a> <a
